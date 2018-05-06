@@ -1,0 +1,101 @@
+*{margin: 0;padding: 0;}
+
+a{text-decoration: none;}
+
+main{text-align: center;display: flex;justify-content: center;align-items: center;height: 100vh;}
+
+body{background: #ddd url("img/wallhaven-w-min.jpg") no-repeat center center;background-size: cover;}
+
+#main{display: inline-block; position: absolute; top: 300px; right: 0; left: 0;}
+
+#main > .row{margin: 12px;}
+
+#main > .row > .key {margin: 0 8px; }
+
+#main > .row > .key >button{color: white;background: black;border: 1px solid black; transition: all .3s}
+
+#main > .row > .key >button:hover{color: black;background: white;padding: 1px 2px;border-radius: 4px;}
+
+.key {color: #cfcfcf; border: 1px solid #222;width: 66px;height: 61px;  background: #000;box-shadow: 0 0 0 1px #161718, 0 0 0 2px #1b1c1d, 0 2px 0 2px #080808;border-radius: 6px;display: inline-block;font-size: 18px;font-family: "Helvetica Neue", serif;text-transform: uppercase;position: relative;}
+
+#main > div > kbd > button{position: absolute;right: 4px;bottom: 0;display: none;}
+
+#main > div > kbd:hover{
+    cursor: pointer;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+#main > div > kbd:hover > button{display: inline-block;}
+
+#main > div > #delete{font-size: 16px;width: 114px;text-transform: lowercase;}
+
+#main > div > #tab{font-size: 16px;width: 114px;text-transform: lowercase;}
+
+#main > div > #capsLock{font-size: 16px;width: 133px;text-transform: lowercase;}
+
+#main > div > #return{font-size: 16px;width: 130px;text-transform: lowercase;}
+
+#main > div > #shift{font-size: 16px;width: 172px;text-transform: lowercase;}
+
+.key > img{width: 14px;height: 14px;position: absolute;left: 4px;bottom: 2px;}
+
+.key .text{position: absolute;left: 4px;top: 2px;}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+form{
+    padding-bottom: 50px;
+    text-align: center;
+    position: absolute;
+    top: 190px;
+    left: 0;
+    right: 0;
+}
+input{
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 3px solid #050505;
+    box-sizing: border-box;
+    background: transparent;
+}
+input:focus{
+    outline: none;
+}
+form a{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Microsoft YaHei", "微软雅黑", serif;
+    text-decoration: none;
+    border-radius: 8px;
+    background: #050505;
+}
+form .baidu{
+    margin: 0 10px;
+}
+form a:hover{
+    cursor: pointer;
+}
